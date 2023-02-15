@@ -1,214 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind CSS</title>
-    <link rel="stylesheet" href="input.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- Navbar  -->
-    <nav class="flex items-center justify-between px-5 py-5 bg-slate-300 fixed w-full">
-      <h1 class="font-mono text-sky-900 text-3xl font-bold">TailWind CSS</h1>
-      <ul class="sm:flex justify-evenly font-poppins hidden sm:visible">
-        <li
-          class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full"
-        >
-          <a href="#hero">Home</a>
-        </li>
-        <li
-          class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full"
-        >
-          <a href="#features">Features</a>
-        </li>
-        <li
-        class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full"
-      >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind CSS</title>
+  <link rel="stylesheet" href="input.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar  -->
+  <nav class="flex items-center justify-between px-5 py-5 bg-slate-300 w-full">
+    <h1 class="font-mono text-sky-900 text-3xl font-bold"><a href="/">Tailwind CSS</a></h1>
+    <ul class="sm:flex sm:justify-evenly font-poppins hidden sm:visible ">
+      <li class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full">
+        <a href="#hero">Home</a>
+      </li>
+      <li class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full">
+        <a href="#features">Features</a>
+      </li>
+      <li class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full">
         <a href="#records">Records</a>
       </li>
-        <li
-          class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full"
-        >
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+      <li class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+    <button id="hamburger" onclick="buttonClicked()" class="sm:hidden flex justify-center cursor-pointer"><img width="60%"
+        src="https://img.icons8.com/external-doodle-bomsymbols-/91/null/external-design-doodle-web-design-device-set-2-doodle-bomsymbols--3.png" />
+    </button>
+  </nav>
 
-    <!-- Hero Section  -->
-    <section
-      class="md:flex bg-slate-300 py-10 columns-1 md:columns-2 text-center py-20" id="hero"
-    >
-      <div class="text-center flex flex-col justify-center font-poppins px-10">
-        <h1 class="text-lg sm:text-2xl font-semibold text-sky-700">
-          A Tailwind CSS Practice Website
-        </h1>
-        <p class="mb-2 text-grey">
-          Website Created to Practice Tailwind CSS and it's utility classes and
-          make multiple reusable components.
-        </p>
-        <div class="mb-5">
-          <button
-            class="py-2 px-3 bg-sky-600 text-white rounded-full hover:bg-sky-700"
-          >
-            Action
-          </button>
-          <button
-            class="py-2 px-3 bg-sky-600 text-white rounded-full hover:bg-sky-700"
-          >
-            Sign up
-          </button>
-        </div>
-      </div>
-      <div class="text-center flex justify-center">
-        <img class="" width="60%" src="./images/main-head.png" alt="" />
-      </div>
-    </section>
+  <!-- Responsive Navabr -->
+  <ul  id="responsive-nav" class="flex flex-col hidden sm:hidden justify-evenly font-poppins bg-slate-300 ease-in-out">
+    <li class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full">
+      <a href="#hero">Home</a>
+    </li>
+    <li class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full">
+      <a href="#features">Features</a>
+    </li>
+    <li class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full">
+      <a href="#records">Records</a>
+    </li>
+    <li class=" cursor-pointer mx-2 px-2.5 py-1.5 text-md hover:bg-sky-900 hover:text-white rounded-full">
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+  <!-- / -->
 
-    <!-- Cards -->
-    <section class="bg-slate-300" id="features">
-      <h1 class="text-center text-4xl font-bold text-sky-900 mb-3">
-        Welcome to Cards
+
+  <!-- Hero Section  -->
+  <section class="md:flex bg-slate-300 py-10 columns-1 md:columns-2 text-center py-28" id="hero">
+    <div class="text-center flex flex-col justify-center font-poppins px-10">
+      <h1 class="text-lg sm:text-2xl font-semibold text-sky-700">
+        A Tailwind CSS Practice Website
       </h1>
-      <div class="columns-1 sm:columns-2 px-10 bg-slate-300 text-white">
-        <div
-          class="bg-slate-800 w-[100%] p-5 mb-3 hover:shadow-2xl shadow-white rounded-lg ="
-        >
-          <h1 class="text-2xl text-center">Rapid Development</h1>
-          <p class="text-grey text-center">Tailwind CSS</p>
-          <p>
-            Tailwind CSS provides a wide range of pre-built classes for styling common elements, allowing developers to quickly and easily style their web pages without writing custom CSS from scratch. This can significantly speed up the development process and reduce the time and effort required to create and maintain complex stylesheets.
-          </p>
-        
-        </div>
-        <div class="bg-slate-800 w-[100%] p-5 mb-3 shadow-lg rounded-lg =">
-          <h1 class="text-2xl text-center">Consistent Design</h1>
-          <p class="text-grey text-center">Tailwind CSS</p>
-          <p>
-            Tailwind CSS promotes a consistent and cohesive design language across a project by providing a set of standardized utility classes that can be used to create consistent and predictable UI components. This helps to ensure that the design remains coherent and visually appealing, even as the project grows and evolves over time.
-          </p>
-        
-        </div>
-        <div class="bg-slate-800 w-[100%] p-5 mb-3 shadow-lg rounded-lg =">
-          <h1 class="text-2xl text-center">Customization</h1>
-          <p class="text-grey text-center">Tailwind CSS</p>
-          <p>
-            Tailwind CSS is highly customizable, which means that developers can modify and extend the default styles to create unique designs that match the requirements of their project. This makes it easy to create custom themes and design patterns that can be reused across different projects or within the same project.
-          </p>
-         
-        </div>
-        <div class="bg-slate-800 w-[100%] p-5 mb-3 shadow-lg rounded-lg =">
-          <h1 class="text-2xl text-center">Responsive Design</h1>
-          <p class="text-grey text-center">Tailwind CSS</p>
-          <p>
-            Tailwind CSS includes a powerful set of responsive utility classes that make it easy to create designs that adapt to different screen sizes and devices. This means that developers can create mobile-first designs that look great on all devices, without having to write custom media queries or JavaScript code. This can save a lot of time and effort, and ensure a better user experience for visitors to the website.
-          </p>
-          
-        </div>
+      <p class="mb-2 text-grey">
+        Website Created to Practice Tailwind CSS and it's utility classes and
+        make multiple reusable components.
+      </p>
+      <div class="mb-5">
+        <button class="py-2 px-3 bg-sky-600 text-white rounded-full hover:bg-sky-700">
+          Action
+        </button>
+        <button class="py-2 px-3 bg-sky-600 text-white rounded-full hover:bg-sky-700">
+          Sign up
+        </button>
       </div>
-    </section>
-
-    <!-- Tables -->
-    <section class="bg-slate-300 py-10 font-poppins shadow-lg" id="records">
-        <h1 class="text-3xl text-center mb-[1rem] text-sky-800 font-semibold">
-            Students Table
-        </h1>
-        <table
-            class="flex justify-center table-auto border-collapse border-green-600 border-solid rounded-lg text-start"
-        >
-            <tr class="text-black rounded-lg">
-            <th class="text-lg py-2 px-2 bg-grey md:p-5 md:text-2xl md:font-semibold">Name</th>
-            <th class="text-lg py-2 px-2 bg-grey md:p-5 md:text-2xl md:font-semibold">Email</th>
-            <th class="text-lg py-2 px-2 bg-grey md:p-5 md:text-2xl md:font-semibold">Status</th>
-            <th class="text-lg py-2 px-2 bg-grey md:p-5 md:text-2xl md:font-semibold">Duration</th>
-            </tr>
-            <tr class="text-base bg-gray-200">
-            <td class="py-5 px-2">Hafsa</td>
-            <td class="py-5 px-2">hafsa@ititans.com</td>
-            <td class="py-5 px-2 text-green-700 font-semibold">Active</td>
-            <td class="py-5 px-2">2 months</td>
-            </tr>
-            <tr class="text-base bg-gray-400">
-            <td class="py-5 px-2">Kashaf</td>
-            <td class="py-5 px-2">kashaf@ititans.com</td>
-            <td class="py-5 px-2 text-green-700 font-semibold">Active</td>
-            <td class="py-5 px-2">2 months</td>
-            </tr>
-            <tr class="text-base bg-gray-200">
-            <td class="py-5 px-2">Zain</td>
-            <td class="py-5 px-2">zain.javed@titans.com</td>
-            <td class="py-5 px-2 text-red-500 font-semibold">Not Active</td>
-            <td class="py-5 px-2">2 months</td>
-            </tr>
-            <tr class="text-base bg-gray-400">
-            <td class="py-5 px-2">Farwa</td>
-            <td class="py-5 px-2">farwa@ititans.com</td>
-            <td class="py-5 px-2 text-green-700 font-semibold">Active</td>
-            <td class="py-5 px-2">2 months</td>
-            </tr>
-        </table>
-        </section>
-
-    <!-- Form -->
-    <section class="bg-slate-300 py-10 font-poppins" id="contact">
-      <h1 class="text-center text-4xl font-semibold text-sky-900 font-poppins">
-        Contact Us
-      </h1>
-      <form
-        action=""
-        class="flex flex-col justify-center align-middle sm:w-[40rem] px-10 border-collapse border-spacing-1 border-green-400"
-      >
-        <label
-          class="text-lg mt-3 font-poppins text-sky-900 font-semibold"
-          for=""
-          >Username</label
-        >
-        <input
-          type="text"
-          class="p-3 rounded-lg shadow-inner focus:border-blue-500 focus:outline-sky-600"
-          placeholder="Enter Your Usrname"
-        />
-        <label
-          class="text-lg mt-3 font-poppins text-sky-900 font-semibold"
-          for=""
-          >Email</label
-        >
-        <input
-          type="email"
-          class="p-3 rounded-lg shadow-inner focus:border-blue-500 focus:outline-sky-600"
-          placeholder="Enter Your Email"
-        />
-        <label
-          class="text-lg mt-3 font-poppins text-sky-900 font-semibold "
-          for=""
-          >Password</label
-        >
-        <input
-          type="password"
-          class="p-3 rounded-lg shadow-inner focus:outline-sky-600"
-          placeholder="Enter Your Email"
-        />
-        <div class="div">
-          <button
-            type="submit "
-            class="rounded-full bg-sky-600 text-white px-3 py-1 tracking-wide hover:bg-sky-900 mt-5 font-semibold text-lg"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
-    </section>
-
-    <!-- Footer -->
-    <div class="bg-sky-800 text-white py-3 px-2 text-center font-poppins">
-        Powered by Tailwind CSS 
     </div>
-  </body>
+    <div class="text-center flex justify-center">
+      <img class="" width="60%" src="./images/main-head.png" alt="" />
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <section class="bg-slate-300" id="features">
+    <h1 class="text-center text-4xl font-bold text-sky-900 mb-3">
+      Welcome to Cards
+    </h1>
+    <div class="columns-1 sm:columns-2 px-10 bg-slate-300 text-white">
+      <div class="bg-slate-800 w-[100%] p-5 mb-3 hover:shadow-2xl shadow-white rounded-lg =">
+        <h1 class="text-2xl text-center">Rapid Development</h1>
+        <p class="text-grey text-center">Tailwind CSS</p>
+        <p>
+          Tailwind CSS provides a wide range of pre-built classes for styling common elements, allowing developers to
+          quickly and easily style their web pages without writing custom CSS from scratch. This can significantly speed
+          up the development process and reduce the time and effort required to create and maintain complex stylesheets.
+        </p>
+
+      </div>
+      <div class="bg-slate-800 w-[100%] p-5 mb-3 shadow-lg rounded-lg =">
+        <h1 class="text-2xl text-center">Consistent Design</h1>
+        <p class="text-grey text-center">Tailwind CSS</p>
+        <p>
+          Tailwind CSS promotes a consistent and cohesive design language across a project by providing a set of
+          standardized utility classes that can be used to create consistent and predictable UI components. This helps
+          to ensure that the design remains coherent and visually appealing, even as the project grows and evolves over
+          time.
+        </p>
+
+      </div>
+      <div class="bg-slate-800 w-[100%] p-5 mb-3 shadow-lg rounded-lg =">
+        <h1 class="text-2xl text-center">Customization</h1>
+        <p class="text-grey text-center">Tailwind CSS</p>
+        <p>
+          Tailwind CSS is highly customizable, which means that developers can modify and extend the default styles to
+          create unique designs that match the requirements of their project. This makes it easy to create custom themes
+          and design patterns that can be reused across different projects or within the same project.
+        </p>
+
+      </div>
+      <div class="bg-slate-800 w-[100%] p-5 mb-3 shadow-lg rounded-lg =">
+        <h1 class="text-2xl text-center">Responsive Design</h1>
+        <p class="text-grey text-center">Tailwind CSS</p>
+        <p>
+          Tailwind CSS includes a powerful set of responsive utility classes that make it easy to create designs that
+          adapt to different screen sizes and devices. This means that developers can create mobile-first designs that
+          look great on all devices, without having to write custom media queries or JavaScript code. This can save a
+          lot of time and effort, and ensure a better user experience for visitors to the website.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Tables -->
+  <section class="bg-slate-300 py-10 font-poppins shadow-lg" id="records">
+    <h1 class="text-3xl text-center mb-[1rem] text-sky-800 font-semibold">
+      Students Table
+    </h1>
+    <table class="flex justify-center table-auto border-collapse border-green-600 border-solid rounded-lg text-start">
+      <tr class="text-black rounded-lg">
+        <th class="text-lg py-2 px-2 bg-grey md:p-5 md:text-2xl md:font-semibold">Name</th>
+        <th class="text-lg py-2 px-2 bg-grey md:p-5 md:text-2xl md:font-semibold">Email</th>
+        <th class="text-lg py-2 px-2 bg-grey md:p-5 md:text-2xl md:font-semibold">Status</th>
+        <th class="text-lg py-2 px-2 bg-grey md:p-5 md:text-2xl md:font-semibold">Duration</th>
+      </tr>
+      <tr class="text-base bg-gray-200">
+        <td class="py-5 px-2">Hafsa</td>
+        <td class="py-5 px-2">hafsa@ititans.com</td>
+        <td class="py-5 px-2 text-green-700 font-semibold">Active</td>
+        <td class="py-5 px-2">2 months</td>
+      </tr>
+      <tr class="text-base bg-gray-400">
+        <td class="py-5 px-2">Kashaf</td>
+        <td class="py-5 px-2">kashaf@ititans.com</td>
+        <td class="py-5 px-2 text-green-700 font-semibold">Active</td>
+        <td class="py-5 px-2">2 months</td>
+      </tr>
+      <tr class="text-base bg-gray-200">
+        <td class="py-5 px-2">Zain</td>
+        <td class="py-5 px-2">zain.javed@titans.com</td>
+        <td class="py-5 px-2 text-red-500 font-semibold">Not Active</td>
+        <td class="py-5 px-2">2 months</td>
+      </tr>
+      <tr class="text-base bg-gray-400">
+        <td class="py-5 px-2">Farwa</td>
+        <td class="py-5 px-2">farwa@ititans.com</td>
+        <td class="py-5 px-2 text-green-700 font-semibold">Active</td>
+        <td class="py-5 px-2">2 months</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Form -->
+  <section class="bg-slate-300 py-10 font-poppins" id="contact">
+    <h1 class="text-center text-4xl font-semibold text-sky-900 font-poppins">
+      Contact Us
+    </h1>
+    <form action=""
+      class="flex flex-col justify-center align-middle sm:w-[40rem] px-10 border-collapse border-spacing-1 border-green-400">
+      <label class="text-lg mt-3 font-poppins text-sky-900 font-semibold" for="">Username</label>
+      <input type="text" class="p-3 rounded-lg shadow-inner focus:border-blue-500 focus:outline-sky-600"
+        placeholder="Enter Your Usrname" />
+      <label class="text-lg mt-3 font-poppins text-sky-900 font-semibold" for="">Email</label>
+      <input type="email" class="p-3 rounded-lg shadow-inner focus:border-blue-500 focus:outline-sky-600"
+        placeholder="Enter Your Email" />
+      <label class="text-lg mt-3 font-poppins text-sky-900 font-semibold " for="">Password</label>
+      <input type="password" class="p-3 rounded-lg shadow-inner focus:outline-sky-600" placeholder="Enter Your Email" />
+      <div class="div">
+        <button type="submit "
+          class="rounded-full bg-sky-600 text-white px-3 py-1 tracking-wide hover:bg-sky-900 mt-5 font-semibold text-lg">
+          Submit
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <div class="bg-sky-800 text-white py-3 px-2 text-center font-poppins">
+    Powered by Tailwind CSS
+  </div>
+</body>
+
+<!-- javascript for nav -->
+<script>
+  var hamburger = document.getElementById("hamburger")
+  var crossBtn = hamburger.innerHTML
+  var responsiveNav = document.getElementById("responsive-nav")
+  var nav_active = false
+  console.log(hamburger)
+  function buttonClicked(){
+   if(nav_active){
+    responsiveNav.classList.add("hidden")
+    nav_active = false
+    hamburger.innerHTML = crossBtn
+
+   }
+   else{
+    responsiveNav.classList.remove("hidden")
+    nav_active = true
+    hamburger.innerHTML = `<img width="60%" src="https://img.icons8.com/ios-glyphs/90/null/multiply.png"/>`
+   }
+  }
+  
+</script>
+
 </html>
